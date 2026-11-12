@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Clientes</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Cadastro de Clientes</h1>
+      <p>Cadastre, consulte e exclua clientes usando a API CrudCrud.</p>
+    </header>
+
+    <section class="card" aria-labelledby="titulo-api">
+      <h2 id="titulo-api">Configuração da API</h2>
+      <label for="endpoint">Seu endpoint do CrudCrud</label>
+      <div class="endpoint-row">
+        <input id="endpoint" type="url" placeholder="https://crudcrud.com/api/SEU_IDENTIFICADOR" autocomplete="off">
+        <button id="salvar-endpoint" type="button" class="secondary">Conectar</button>
+      </div>
+      <small>Gere gratuitamente seu endpoint em <a href="https://crudcrud.com" target="_blank" rel="noopener noreferrer">crudcrud.com</a>. Use somente a URL até o identificador (sem /clientes). Ela fica salva neste navegador.</small>
+    </section>
+
+    <section class="card" aria-labelledby="titulo-formulario">
+      <h2 id="titulo-formulario">Novo cliente</h2>
+      <form id="form-cliente">
+        <label for="nome">Nome</label>
+        <input id="nome" name="nome" type="text" placeholder="Nome completo" maxlength="100" required>
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" placeholder="exemplo@email.com" maxlength="150" required>
+        <button id="botao-cadastrar" type="submit">Cadastrar cliente</button>
+      </form>
+      <p id="mensagem" class="mensagem" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="card" aria-labelledby="titulo-clientes">
+      <div class="list-title">
+        <h2 id="titulo-clientes">Clientes cadastrados <span id="quantidade" class="counter">0</span></h2>
+        <button id="atualizar" type="button" class="secondary">Atualizar lista</button>
+      </div>
+      <p id="estado-lista" class="muted">Configure o endpoint para carregar os clientes.</p>
+      <ul id="lista-clientes" class="clientes"></ul>
+    </section>
+  </main>
+</body>
+</html>

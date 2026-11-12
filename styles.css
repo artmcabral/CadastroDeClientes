@@ -1,0 +1,32 @@
+* { box-sizing: border-box; }
+body { margin: 0; background: #f3f6fb; color: #233044; font: 16px/1.5 Arial, sans-serif; }
+.container { width: min(100% - 32px, 680px); margin: 45px auto; }
+header { margin-bottom: 24px; }
+h1 { font-size: 30px; margin: 0 0 6px; }
+header p, .muted, small { color: #657388; }
+.card { padding: 24px; margin: 16px 0; background: #fff; border: 1px solid #e2e7f0; border-radius: 12px; box-shadow: 0 4px 18px #14273a0a; }
+h2 { font-size: 20px; margin: 0 0 17px; }
+label { display: block; margin: 12px 0 6px; font-weight: 600; }
+input { width: 100%; min-width: 0; padding: 12px; border: 1px solid #cbd5e1; border-radius: 7px; font: inherit; }
+input:focus { outline: 2px solid #97b8fa; border-color: #326dcb; }
+button { padding: 12px 16px; color: white; background: #2662c1; border: 0; border-radius: 7px; font: inherit; font-weight: 600; cursor: pointer; }
+button:hover { filter: brightness(.93); }
+button:disabled { opacity: .55; cursor: wait; }
+form button { margin-top: 18px; }
+button.secondary { color: #2557a4; background: #eaf1ff; }
+button.danger { background: #b72d3c; }
+.endpoint-row { display: flex; gap: 10px; }
+small { display: block; margin-top: 10px; }
+a { color: #205bb0; }
+.list-title { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.list-title h2 { margin-bottom: 0; }
+.counter { font-size: 13px; background: #eaf1ff; border-radius: 30px; padding: 4px 9px; color: #245aa9; }
+.clientes { list-style: none; padding: 0; margin: 14px 0 0; }
+.cliente { display: flex; align-items: center; justify-content: space-between; gap: 16px; border-top: 1px solid #e8edf4; padding: 16px 0; }
+.cliente div { min-width: 0; overflow-wrap: anywhere; }
+.cliente strong, .cliente span { display: block; }
+.cliente span { color: #657388; font-size: 14px; }
+.mensagem { min-height: 22px; margin-bottom: 0; }
+.mensagem.sucesso { color: #157447; }
+.mensagem.erro { color: #b72d3c; }
+@media (max-width: 540px) { .endpoint-row, .list-title { flex-direction: column; align-items: stretch; } .card { padding: 18px; } }
